@@ -3,5 +3,15 @@
     "compatibility_date": "2026-02-06",
     "assets": {
         "directory": "./dist"
-    }
+    },
+    "routes": [
+        {
+            "pattern": "autofile-claim.com/*",
+            "zone_name": "autofile-claim.com"
+        },
+        {
+            "pattern": "www.autofile-claim.com/*",
+            "zone_name": "autofile-claim.com"
+        }
+    ]
 }

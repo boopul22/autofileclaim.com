@@ -103,24 +103,24 @@ const ClaimForm: React.FC = () => {
   }
 
   return (
-    <section id="claim" className="py-24 bg-gradient-to-br from-brand-white to-brand-lightgray/50">
+    <section id="claim" className="py-16 sm:py-24 bg-gradient-to-br from-brand-white to-brand-lightgray/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6 sm:mb-10">
             <span className="text-brand-blue font-bold tracking-wider uppercase text-sm">Start Process</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-darkgray mt-2">Need to Claim? - Talk to Us</h2>
-            <p className="mt-4 text-brand-medgray">Fill out the form below for a free claim assessment.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-darkgray mt-2">Need to Claim? - Talk to Us</h2>
+            <p className="mt-3 sm:mt-4 text-brand-medgray">Fill out the form below for a free claim assessment.</p>
           </div>
 
-          <div className="bg-brand-white rounded-2xl shadow-medium overflow-hidden border border-brand-lightgray">
-            <div className="bg-gradient-to-r from-brand-charcoal to-brand-darkgray px-8 py-4">
-              <h3 className="text-brand-white font-medium text-lg flex items-center">
+          <div className="bg-brand-white rounded-xl sm:rounded-2xl shadow-medium overflow-hidden border border-brand-lightgray">
+            <div className="bg-gradient-to-r from-brand-charcoal to-brand-darkgray px-4 sm:px-8 py-3 sm:py-4">
+              <h3 className="text-brand-white font-medium text-base sm:text-lg flex items-center">
                 <span className="w-2 h-2 bg-brand-green rounded-full mr-3 animate-pulse"></span>
                 Online Claim Form
               </h3>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-8 md:p-12">
+            <form onSubmit={handleSubmit} className="p-4 sm:p-8 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {/* Personal Details */}
                 <div className="space-y-4">

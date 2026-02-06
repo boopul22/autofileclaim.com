@@ -24,11 +24,11 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-brand-white shadow-soft sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-16 sm:h-20 items-center">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-            <img src="/logo.png" alt="Auto File Claim" className="h-10 w-auto rounded-lg" />
-            <span className="font-bold text-xl text-brand-deep">Auto File Claim</span>
+            <img src="/logo.png" alt="Auto File Claim" className="h-8 sm:h-10 w-auto rounded-lg" />
+            <span className="font-bold text-lg sm:text-xl text-brand-deep">Auto File Claim</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -48,9 +48,10 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-brand-darkgray hover:text-brand-blue focus:outline-none"
+              className="p-2 text-brand-darkgray hover:text-brand-blue focus:outline-none"
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
           </div>
         </div>
@@ -59,11 +60,11 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-brand-white border-t border-brand-lightgray absolute w-full shadow-medium">
-          <div className="px-4 pt-4 pb-6 space-y-2 flex flex-col">
-            <button onClick={() => handleNavClick('#home')} className="block text-left px-3 py-2 text-brand-darkgray hover:bg-brand-offwhite rounded-md font-medium">Home</button>
-            <Link to="/about" onClick={() => setIsOpen(false)} className="block text-left px-3 py-2 text-brand-darkgray hover:bg-brand-offwhite rounded-md font-medium">About Us</Link>
-            <Link to="/start-claim" onClick={() => setIsOpen(false)} className="block text-left px-3 py-2 text-brand-blue font-bold hover:bg-brand-offwhite rounded-md">Start Your Claim</Link>
-            <a href="tel:8886263214" className="block px-3 py-3 mt-2 text-center text-brand-white bg-brand-deep rounded-md font-bold">Call : 888 626 3214</a>
+          <div className="px-4 pt-3 pb-4 space-y-1 flex flex-col">
+            <button onClick={() => handleNavClick('#home')} className="block text-left px-4 py-3 text-brand-darkgray hover:bg-brand-offwhite rounded-lg font-medium">Home</button>
+            <Link to="/about" onClick={() => setIsOpen(false)} className="block text-left px-4 py-3 text-brand-darkgray hover:bg-brand-offwhite rounded-lg font-medium">About Us</Link>
+            <Link to="/start-claim" onClick={() => setIsOpen(false)} className="block text-center px-4 py-3 mt-2 text-brand-white bg-brand-blue rounded-lg font-bold">Start Your Claim</Link>
+            <a href="tel:8886263214" className="block px-4 py-3 mt-1 text-center text-brand-white bg-brand-deep rounded-lg font-bold">Call : 888 626 3214</a>
           </div>
         </div>
       )}
