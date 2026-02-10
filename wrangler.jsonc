@@ -12,6 +12,14 @@
         {
             "pattern": "www.autofile-claim.com/*",
             "zone_name": "autofile-claim.com"
+        },
+        {
+            "pattern": "ukclaims.org/*",
+            "zone_name": "ukclaims.org"
+        },
+        {
+            "pattern": "www.ukclaims.org/*",
+            "zone_name": "ukclaims.org"
         }
     ]
 }
